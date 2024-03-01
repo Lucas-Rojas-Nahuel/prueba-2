@@ -1,0 +1,62 @@
+Algoritmo compañia_turista
+	Definir np, p, pp, h Como Entero
+	Definir ta Como Caracter
+	Escribir "Ingresar numero de paquetes"
+	Leer np
+	si np <> 0 Entonces
+		Escribir "Ingresar cantidad de personas incluidas"
+		Leer cp
+		Escribir "Ingresar precio por personas"
+		Leer pp
+		Escribir "Ingresar horas de actividad"
+		Leer h
+		Escribir " Tipo de aventura (M), Montaña. (T), Trekking. (R), Rafting. (B), Bicicleta .(C), Canopy. (E), Escalar. (K), Sky. (S), Snowboard. (J), Jumping. (P), Parapente."
+		Escribir "Ingresar tipo de aventura"
+		Leer ta
+	FinSi
+	
+	
+	acupb= 0
+	min=h
+	tamin=ta
+	Mientras np <> 0 Hacer
+		taact= ta
+		cpa= 0
+		max=0
+		
+		Mientras ta= taact y np <> 0 Hacer
+			cpa= cpa + 1
+			acupb= acupb + cp
+			pv= cp * pp
+			Escribir "El total recaudado es: ", pv
+			
+			
+			si pv > max Entonces
+				max= pv
+			FinSi
+			
+			si h < min Entonces
+				min=h
+				tamin= ta
+			FinSi
+			
+			Escribir "Ingresar numero de paquetes"
+			Leer np
+			si np <> 0 Entonces
+				Escribir "Ingresar cantidad de personas incluidas"
+				Leer cp
+				Escribir "Ingresar precio por personas"
+				Leer pp
+				Escribir "Ingresar horas de actividad"
+				Leer h
+				Escribir " Tipo de aventura (M), Montaña. (T), Trekking. (R), Rafting. (B), Bicicleta .(C), Canopy. (E), Escalar. (K), Sky. (S), Snowboard. (J), Jumping. (P), Parapente."
+				Escribir "Ingresar tipo de aventura"
+				Leer ta
+			FinSi
+		FinMientras
+		Escribir "la cantidad de paquetes vendidos fueron: ", cpa
+		Escribir "la venta con mayor inporte: ", max
+	FinMientras
+	Escribir "la cantidad de personas que disfrutaron: ", acupb
+	Escribir "el paquete con menos horas incurridas fueron de ", min ," de la actividad ", tamin
+FinAlgoritmo
